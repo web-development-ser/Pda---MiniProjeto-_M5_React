@@ -2,13 +2,13 @@
 .conatiner_search {
     display: flex;
     flex-direction: row;
-    padding: 0.4rem 0.4rem;
+    padding: 0.8rem 0.4rem;
     margin-bottom: 0.4rem;
     border-bottom: solid 1px #8a84ca;
 }
 .conatiner_search input {
     font-family: "Titillium Web", sans-serif;
-    font-size: 0.7rem;
+    font-size: 1.3rem;
     width: 100%;
     border-radius: 5px;
     border: solid 1px #8a84ca;
@@ -26,7 +26,7 @@ span {
 }
 .span_notification {
     font-family: "Titillium Web", sans-serif;
-    font-size: 0.6rem;
+    font-size: 1.3rem;
     color: rgb(174, 255, 23);
     line-height: 0.7rem;
     margin-bottom: 0.5rem;
@@ -34,7 +34,7 @@ span {
 
 .section_fetch {
     margin: 0 0.4rem;
-    width: 500px;
+    width: 50%;
 }
 .conatiner_main {
     background: #fff;
@@ -46,7 +46,7 @@ span {
     font-family: "Titillium Web", sans-serif;
 }
 .container_box {
-    font-size: 0.8rem;
+    font-size: 1.5rem;
     background: #302b63;
     color: #fff;
     display: flex;
@@ -54,7 +54,6 @@ span {
     align-items: center;
 
     padding: 0.6rem;
-    line-height: 1.3rem;
 }
 .container_box {
     border-top-left-radius: 12px;
@@ -62,18 +61,19 @@ span {
     border-bottom: solid #8a84ca 2px;
 }
 .container_box img {
-    width: 30px;
+    width: 80px;
+    height: 80px;
     border-radius: 3px;
     border: solid #8a84ca 1px;
 }
 
 .conatiner_main div:last-child {
-    font-size: 0.7rem;
-    line-height: 0.9rem;
+    font-size: 1.3rem;
     padding: 0.6rem;
 }
 
 .button_post {
+    font-size: 1.6rem;
     background: #32dc1c;
     color: #fff;
     font-weight: 700;
@@ -91,12 +91,12 @@ span {
 main {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    
 }
 
 .section_card {
     margin: 0 0.4rem;
-    width: 80%;
+    width: 100%;
 }
 
 

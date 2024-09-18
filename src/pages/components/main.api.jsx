@@ -86,7 +86,7 @@ const MAIN_API = () => {
                         <img src={data.image} alt={data.title} />
                     </div>
 
-                    <div style={{ height: "200px", overflowY: "scroll" }}>
+                    <div style={{ height: "400px", overflowY: "scroll" }}>
                         <p><strong>Description: </strong>{data.description}</p>
                         <button className="button_post">EDIT</button>
                     </div>
