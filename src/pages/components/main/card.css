@@ -1,5 +1,7 @@
 textarea {
     font-size: 1.3rem;
+    padding: 0.6rem;
+    font-family: "Source Serif 4", serif;
     min-width: 100%;
     max-width: 300px;
     min-height: 80%;
@@ -8,46 +10,53 @@ textarea {
 
 input {
     font-size: 1.3rem;
-    width: 100%;
-    border: solid 1px blue;
+ 
+    font-family: "Rajdhani", sans-serif;
+    font-weight: 600;
+    border-radius: 5px;
+    border: solid 2px #8a84ca;
+    outline: none;
     padding: 0.2rem 0.3rem;
-    border-radius: 3px;
     margin: 0.2rem 0;
     outline: none;
 }
 
 .container_card {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.container_card div {
+    display: flex;
     flex-direction: column;
 }
 
 
 
+
 .button_post_local {
-    font-size: 1.6rem;
-    margin-right: 0.5rem;
-    background: #ebb325;
-    color: #fff;
-    font-weight: 700;
-    padding: 0.1rem 0.3rem;
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    color: #2c216c;
+    padding: 0.1rem 0.6rem;
     border-radius: 3px;
-    border: none;
-    font-family: "Titillium Web", sans-serif;
-    margin-top: 1rem;
+    border: dashed 2px #ebb325;
+    font-family: "Rajdhani", sans-serif;
+    margin: 1rem 0;
 }
 .button_post_local:hover {
-    border: solid 2px #9dc8a5;
+    border: solid 2px #ebb325;
 }
 .button_get_local {
-    font-size: 1.6rem;
-    background: #214ee1;
-    color: #fff;
-    font-weight: 700;
-    padding: 0.1rem 0.3rem;
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    color: #2c216c;
+    padding: 0.1rem 0.6rem;
     border-radius: 3px;
-    border: none;
-    font-family: "Titillium Web", sans-serif;
-    margin-top: 1rem;
+    border: dashed 2px #2543eb;
+    font-family: "Rajdhani", sans-serif;
+    margin: 1rem 1rem;
 }
 .button_get_local:hover {
-    border: solid 2px #9dc8a5;
+    border: solid 2px #2543eb;
 }

@@ -2,7 +2,7 @@ import './footer.css';
 const Footer = () => {
     return (
         <footer>
-            <p>@Developed by Sérgio</p>
+            <p>@Developed by Sérgio<span className='noneAll'> - @his.sergio.his</span></p>
         </footer>
     );
 };

@@ -24,7 +24,6 @@ const MAIN_API = () => {
                 setTimeout(() => setLoading (false), 1000);
             } catch (err) {
                 setNotification("Maybe you didn't type something, or it seems that this search was unsuccessful, try again, if it doesn't work test...");
-                // container_prox (true);
             };
         };
         fetchData();
@@ -72,23 +71,24 @@ const MAIN_API = () => {
         <main>
             <section className="section_fetch">
                 <div className="conatiner_search">
-                    <input type="text" placeholder="Busque algo!" onChange={(text) => {setTextSearch (text.target.value)}}/>
-                    <span onClick={() => {setSearch (textSearch)}} class="material-symbols-outlined">search</span>
+                    <input type="text" placeholder="Search for an ANM." onChange={(text) => {setTextSearch (text.target.value)}}/>
+                    <span onClick={() => {setSearch (textSearch)}} className="material-symbols-outlined">search</span>
                 </div>
 
                 <p className="span_notification">{notification}</p>
+                
                 <div className="conatiner_main">
                     <div className="container_box" >
                         <div>
-                            <h3>{data.title}</h3>
-                            <p>{data.studio}</p>
+                            <h2>{data.title}</h2>
+                            <p>- {data.studio}</p>
                         </div>
                         <img src={data.image} alt={data.title} />
                     </div>
 
                     <div style={{ height: "400px", overflowY: "scroll" }}>
                         <p><strong>Description: </strong>{data.description}</p>
-                        <button className="button_post">EDIT</button>
+                        <button className="button_post">Edit ANM data?</button>
                     </div>
                 </div>
             </section>
