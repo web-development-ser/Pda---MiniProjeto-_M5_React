@@ -1,21 +1,44 @@
 import React, { useEffect, useState } from 'react';
 
-const Teste = () => {
+const His = () => {
   const [items, setItems] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
 
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch('http://localhost:7070/anm/listComplet'); // Substitua pela URL da sua API
+        const response = await fetch('http://localhost:7070/anm/listComplet');
+        
+        if (!response.ok) {
+          throw new Error('Erro na rede');
+        }
+        
         const data = await response.json();
-        setItems(data.toList); // Acessa o array "toList"
+        
+        if (data.toList) {
+          setItems(data.toList);
+        } else {
+          throw new Error('Estrutura de dados inesperada');
+        }
       } catch (error) {
         console.error('Erro ao buscar dados:', error);
+        setError(error.message);
+      } finally {
+        setLoading(false);
       }
     };
 
     fetchData();
   }, []);
+  
+  if (loading) {
+    return <div>Carregando...</div>;
+  }
+
+  if (error) {
+    return <div>Erro: {error}</div>;
+  }
 
   return (
     <div className="container">
@@ -26,7 +49,6 @@ const Teste = () => {
             <h2>{item.title}</h2>
             <p><strong>Estúdio:</strong> {item.studio}</p>
             <p><strong>Sinopse:</strong> {item.synopsis}</p>
-            {/* Adicione mais campos, como genre, episodes, etc., se necessário */}
           </div>
         ))}
       </div>
@@ -34,4 +56,4 @@ const Teste = () => {
   );
 };
 
-export default Teste;
+export { His };

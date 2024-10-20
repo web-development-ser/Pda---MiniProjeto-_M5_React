@@ -89,6 +89,8 @@ const MAIN_API = () => {
                     <div style={{ height: "400px", overflowY: "scroll" }}>
                         <p><strong>Description: </strong>{data.description}</p>
                         <button className="button_post">Edit ANM data?</button>
+                        
+                        <a href="/list"><button className="button_post">View List</button></a>
                     </div>
                 </div>
             </section>
